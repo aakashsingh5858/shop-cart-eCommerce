@@ -1,0 +1,119 @@
+.header {
+  position: relative;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(52, 51, 51, 0.12);
+  box-sizing: border-box;
+}
+.header-menu-list {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.menu-list-wrap {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.menu-list {
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bs-gray);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.list-btn {
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+  gap: 1rem;
+}
+.menu-list-btn {
+  list-style: none;
+  color: var(--bs-secondary);
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.header-info,
+.header-bar {
+  color: var(--bs-orange);
+  cursor: pointer;
+}
+.dropMenu-list-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bs-warning);
+  width: 100%;
+}
+
+
+.dropMenu-list {
+  list-style: none;
+  display: flex;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  padding: 12px;
+}
+.dropMenu-list:last-child {
+  border: 0;
+}
+.dropList-btn{
+  position: absolute;
+  z-index: 9;
+}
+.dropList-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  background-color: #eee;
+  box-shadow: 0 4px 4px rgba(52, 51, 51, 0.12);
+}
+@media only screen and (min-width: 1067px) {
+  .header-bar {
+    display: none;
+  }
+  .dropMenu-list-wrap {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 1067px) {
+  .menu-list-wrap {
+    display: none;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .list-btn {
+    display: none;
+  }
+}
+@media only screen and (min-width: 667px) {
+  .header-info {
+    display: none;
+  }
+  .dropList-btn{
+    display: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+.header-container{
+  padding: 12px 20px;
+}
+}
