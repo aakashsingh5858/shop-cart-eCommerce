@@ -26,6 +26,8 @@
 }
 .search-container {
   width: 50%;
+  display: flex;
+  align-items: center;
 }
 
 .span-color {
@@ -37,7 +39,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 60%;
-  gap: 1rem;
+  gap: 0.8rem;
   padding-bottom: 4rem;
 }
 .search-list {
@@ -55,4 +57,25 @@
   font-size: 1.25rem;
   font-weight: 500;
   color: var(--bs-gray-2);
+}
+
+@media only screen and (max-width: 667px) {
+  .banner-title {
+    width: 80%;
+  }
+  .search-container {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .banner-title {
+    width: 90%;
+  }
+  .search-container {
+    width: 90%;
+  }
+  .search-subHeading{
+    width: 80%;
+    text-align: center;
+  }
 }

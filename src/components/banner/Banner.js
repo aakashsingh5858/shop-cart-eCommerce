@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./banner.css";
 import Input from "../input/Input";
 import productData from "../../products.json";
+import { CiSearch } from "react-icons/ci";
 
 const Banner = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -14,7 +15,6 @@ const Banner = () => {
     );
     setFilteredProducts(filtered);
   };
-  console.log(searchInput.length > 1);
   return (
     <div className="banner-bg">
       <div className="banner-container">
@@ -27,6 +27,8 @@ const Banner = () => {
             placeholder="Search your product"
             onChange={handleSearch}
             value={searchInput}
+            suffix={<CiSearch size="2rem" />}
+            className="input-style"
           />
         </div>
         <div className="search-subHeading">

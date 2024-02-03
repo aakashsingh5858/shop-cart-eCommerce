@@ -1,7 +1,14 @@
 import React from "react";
 import "./input.css";
 
-const Input = ({ placeholder, onChange, value }) => {
+const Input = ({
+  placeholder,
+  onChange,
+  className,
+  value,
+  suffix,
+  onclick,
+}) => {
   return (
     <div className="input-container">
       <input
@@ -9,7 +16,11 @@ const Input = ({ placeholder, onChange, value }) => {
         placeholder={placeholder}
         onChange={onChange}
         value={value}
+        className={className}
       />
+      <span className="icon-suffix" onClick={onclick}>
+        {suffix}
+      </span>
     </div>
   );
 };
